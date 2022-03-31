@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 
 import styles from './App.module.css'
+import WelcomeMsg from './components/WelcomeMsg'
 
 function App() {
     const [error, setError] = useState<string | null>(null)
     const [defaultAcc, setDefaultAcc] = useState<any>(null)
     const [userBalance, setUserBalance] = useState<string | null>(null)
-    const [buttonText, setButtonText] = useState('Please Log-in')
+    const [buttonText, setButtonText] = useState('Get public key')
     const [provider, setProvider] = useState<any>(null)
 
     const connectWalletHandler = async () => {
@@ -46,7 +47,7 @@ function App() {
     return (
         <div className={styles.walletCard}>
             <div className={styles.left}>
-                <h4>Connect to Metamask</h4>
+                <WelcomeMsg account={!!defaultAcc} />
                 <img 
                     src={'https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg'} 
                     alt="MetaMask Image" 

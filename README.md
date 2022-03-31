@@ -8,3 +8,7 @@ npm run dev
 
 # Demo
 [DEMO](https://keeeparis.github.io/portfolio-4)
+
+# Features
+- If you change current change - application will reload.
+- View is responsive to the current account selected.

@@ -10,5 +10,5 @@ npm run dev
 [DEMO](https://keeeparis.github.io/portfolio-4)
 
 # Features
-- If you change current change - application will reload.
+- If you change current chain - application will reload.
 - View is responsive to the current account selected.

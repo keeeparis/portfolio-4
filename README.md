@@ -1,4 +1,5 @@
-### MetaMask React Application
+# MetaMask React Application
+Application to retrieve address and current balance from MetaMask chrome extension.
 
 # Run Application
 ```

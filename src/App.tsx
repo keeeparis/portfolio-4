@@ -30,6 +30,12 @@ function App() {
         }
     }
 
+    const accountChangeHandler = (newAccount: string[]) => setDefaultAcc(newAccount[0])
+    const pageReloadHandler = () => window.location.reload()
+
+    window.ethereum.on('accountsChanged', accountChangeHandler)
+    window.ethereum.on('chainChanged', pageReloadHandler)
+
     useEffect(() => {
         const getBalance = async (account: any) => {
             const balanceResult = await provider.getBalance(account)
@@ -37,12 +43,6 @@ function App() {
         }
         defaultAcc && getBalance(defaultAcc)
     }, [defaultAcc])
-
-    const accountChangeHandler = (newAccount: string[]) => setDefaultAcc(newAccount[0])
-    const pageReloadHandler = () => window.location.reload()
-
-    window.ethereum.on('accountsChanged', accountChangeHandler)
-    window.ethereum.on('chainChanged', pageReloadHandler)
 
     return (
         <div className={styles.walletCard}>

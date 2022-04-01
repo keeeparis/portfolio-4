@@ -5,7 +5,7 @@ const WelcomeMsg = ({
 }) => 
     <>
         {account ? (
-            <h2>Welcome to Metamask</h2>
+            <h2>Welcome to Metamask!</h2>
         ) : (
             <>
                 <h2>Metamask is locked.</h2>
